@@ -10,43 +10,49 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0f",
-        card: "#0d0d14",
-        border: "rgba(255,255,255,0.06)",
-        "border-highlight": "rgba(99,102,241,0.4)",
-        buy: "#10b981",
-        sell: "#ef4444",
-        hold: "#f59e0b",
-        accent: "#6366f1",
-        "accent-secondary": "#8b5cf6",
-        "neon-pink": "#ff6b9d",
-      },
-      fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-      },
-      animation: {
-        spotlight: "spotlight 2s ease 0.75s 1 forwards",
-        "pulse-slow": "pulse 3s ease-in-out infinite",
-      },
-      keyframes: {
-        spotlight: {
-          "0%": {
-            opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translate(-50%, -40%) scale(1)",
-          },
+        bg: "#0a0a0b",
+        surface: "#111113",
+        border: "#1e1e1e",
+        "text-primary": "#e4e4e7",
+        "text-secondary": "#71717a",
+        accent: {
+          green: "#22c55e",
+          cyan: "#06b6d4",
+          amber: "#f59e0b",
+          red: "#ef4444",
+          purple: "#a855f7",
         },
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        mono: ["JetBrains Mono", "Fira Code", "Consolas", "Monaco", "monospace"],
+      },
+      animation: {
+        blink: "blink 1s step-end infinite",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "slide-up": "slide-up 0.2s ease-out",
+        "fade-in": "fade-in 0.15s ease-out",
+      },
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.5" },
+          "50%": { opacity: "1" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(10px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 
 export default config;

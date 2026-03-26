@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SolSense | AI-Powered Solana Portfolio Intelligence",
-  description: "Real-time AI signals from social media, on-chain data, and trending memecoins for the Solana ecosystem.",
+  title: "APEX — AI Website Builder",
+  description: "Build stunning websites with AI. Describe what you want and watch it come to life.",
   icons: {
     icon: [
       {
-        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>",
+        url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230a0a0b' width='100' height='100' rx='12'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='60' font-family='monospace' fill='%23a855f7'>A</text></svg>",
         type: "image/svg+xml",
       },
     ],
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen antialiased">
+      <body className="noise scanlines">
         {children}
       </body>
     </html>
